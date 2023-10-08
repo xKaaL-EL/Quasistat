@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./test.css">
+  <title>Planetary Data</title>
+</head>
+
+<body>
+  <div class="starter">
+    <button onclick="startQuiz(this)">Start</button>
+  </div>
+  <div class="container hide">
+    <header>
+      <p>Data : Habitable World's Observatory</p>
+    </header>
+    <div class="question-box"></div>
+    <footer>
+      <button id="next-btn">Next</button>
+      <button id="finish-btn" class="hide">Finish</button>
+    </footer>
+  </div>
+  <div class="result-box hide">
+    <div class="num-div">
+      Result:
+      <p id="got-num"></p>
+    </div>
+    <div class="button-box">
+      <button id="replay" onclick="resultShow()">Re-Check</button>
+      <button id="replay" onclick="replay()">Reset Data</button>
+      <button id="replay">
+        <a href="./VsCode/solar.html" target= "_blank" >2-D Planetary Model</a>
+      </button>
+    </div>
+  </div>
+
+  <script src="./test.js" charset="utf-8"></script>
+
+
+
+</body>
+
+</html>
