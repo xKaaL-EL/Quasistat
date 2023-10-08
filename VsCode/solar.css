@@ -1,0 +1,282 @@
+div.background {
+  background-image: radial-gradient(#232682, black);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40%;
+  width: 20%;
+  padding: 30px;
+}
+
+.txt {
+  transform: translate(20rem);
+  color: #343434;
+  font-size: 20rem;
+  font-family: Inconsolata;
+}
+
+span.header {
+  transform: translatey(-250px);
+  color: white;
+  font-size: 35px;
+  font-family: Josefin Sans;
+}
+
+.planet_3-orbit,
+.planet_3,
+.planet_2-orbit,
+.planet_2,
+.planet_dec-2,
+.moon_2-orbit,
+.moon_2,
+.planet_1-orbit,
+.planet_1,
+.sun {
+  border-radius: 100%;
+  position: absolute;
+}
+
+.sun {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 150px 25px orange, 0px 0px 50px 5px orange;
+  background: linear-gradient(to right, orange, orange);
+}
+
+.planet_1-orbit {
+  opacity: 75%;
+  border: 1px solid lightgrey;
+  animation: orbit 3.3s linear infinite;
+  width: 145px;
+  height: 145px;
+}
+
+.planet_1 {
+  width: 25px;
+  height: 25px;
+  box-shadow: 0px 0px 25px 10px rgb(255, 255, 255, 0.2);
+  transform: translate(100px);
+  background: linear-gradient(to top, palegoldenrod, #ffb357);
+}
+
+.planet_2-orbit {
+  opacity: 75%;
+  border: 1px solid lightgrey;
+  animation: orbit 4.8s linear infinite;
+  width: 275px;
+  height: 275px;
+}
+
+.planet_2 {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 0px 25px 10px rgb(5, 219, 247, 0.2);
+  transform: translate(190px);
+  background: linear-gradient(to top, #a0e0f2, #248aa6);
+}
+
+.moon_2-orbit {
+  /*  border: 1px solid lightgrey; */
+  animation: orbit 10s linear infinite;
+  width: 75px;
+  height: 75px;
+}
+
+.moon_2 {
+  width: 12px;
+  height: 12px;
+  box-shadow: 0px 0px 5px 2px rgb(255, 255, 255, 0.2);
+  transform: translate(40px);
+  background: linear-gradient(to top, grey, darkgrey);
+}
+
+/*.planet_dec-2{
+  width: 10px;
+  height: 10px;
+  z-index: 10;
+  transform: translate(5px);
+  background: lightblue;
+} */
+.planet_3-orbit {
+  opacity: 75%;
+  border: 1px solid lightgrey;
+  animation: orbit 6.2s linear infinite;
+  width: 400px;
+  height: 400px;
+}
+
+.planet_3 {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0px 0px 25px 10px rgb(255, 255, 255, 0.2);
+  transform: translate(260px);
+  background: linear-gradient(to top, #95f090, #25a81e);
+  font-size: 1rem;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.neon-button {
+  background-color: #333;
+  /* Background color of the button */
+  color: #fff;
+  /* Text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Neon glow effect */
+.neon-button {
+  position: fixed;
+  color: white;
+  bottom: 20px;
+  left: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.neon-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.neon-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #000000, #8d4ec8, #000000, #8d4ec8);
+  background-size: 200% 200%;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(-50%) scale(0.8);
+  z-index: -1;
+}
+
+.neon-button:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Text shadow to make text stand out */
+.neon-button:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.btn-arrow {
+  color: transparent;
+  display: block;
+  margin: 1rem;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(black, .05);
+  transition: all 150ms ease-out;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #606060;
+    transition: all 150ms ease-out;
+  }
+
+  &::before {
+    width: 75%;
+    height: 25%;
+  }
+
+  &::after {
+    width: 25%;
+    height: 75%;
+  }
+
+  &:hover, &:focus {
+    background-color: rgba(black, .1);
+
+    &::before,
+    &::after {
+      background-color: white;
+    }
+  }
+
+  &.btn-arrow-left,
+  &.btn-arrow-right {
+
+    &::before,
+    &::after {
+      top: 12.5%;
+      left: 12.5%;
+    }
+  }
+
+  &.btn-arrow-left {
+    transform: rotate(-45deg);
+  }
+
+  &.btn-arrow-right {
+    transform: rotate(135deg);
+  }
+}
+
+/* ========================= */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
